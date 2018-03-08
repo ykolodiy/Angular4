@@ -1,0 +1,31 @@
+<h1>
+Willkomen to {{ myobject.name }}!
+</h1>
+<p>{{prop}}</p>
+<H2 [class]="titleclass">im red as hell</H2>
+<H2 [ngClass]="titleclasses">im red as hell</H2>
+<h3 [style.color]="style ? 'green' : 'pink'">sadsadsa</h3>
+<h3 [ngStyle]="styles">fghfghfgh</h3>
+<div *ngIf="true; then fff1 else fff2 ">
+
+</div>
+<ng-template #fff1> <ul>
+  <li *ngFor="let y of myarray">{{y}}</li>
+</ul> </ng-template>
+<ng-template #fff2> fuck you  2</ng-template>
+
+<button [disabled]="bstatus == 'enabled'"> my button</button>
+
+<button (click)="myevent($event)">event button</button>
+<button (mouseenter)="myevent($event)">mouse over event button</button>
+
+<img src="{{anglogo}}">
+<img [src] ="anglogo">
+<img bind-src="anglogo">
+
+
+<app-mycomp></app-mycomp>
+
+
+
+
